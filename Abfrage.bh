@@ -1,0 +1,36 @@
+#!/bin/bash/ 
+
+echo -e "\033[5m\e[1;32m\033[4m\033[1mHallo du hast das Starterpaket-Script ausgeführt\e[0m"
+echo -n "Möchtest du dein Linux nur Updaten oder gleich mit ein paar wichtige programme mit installieren
+nach der Auswahl des Pakets wird die dafür vorgesehne bash datei heruntergeladen? 
+[Nur Update[O]//Mit Programmen[M]]?"
+
+while ((!gueltig)); do
+  read -sn1 answer
+  case "$answer" in
+    [Oo])    result=1; gueltig=1 ;;
+    [Mm])      result=0; gueltig=1 ;;
+    *)         gueltig=0 ;;
+  esac
+done
+
+echo
+
+if ((result)); then
+{ echo "Okay dein Linux wird nur ein Update durchführen"
+        cd Downloads 
+        wget https://raw.githubusercontent.com/Xenuzz/APT-Update-Upgrade-Clean-Script/main/update.bh
+        sudo bash Linux_Update.bh
+        echo -e
+    exit
+}
+     
+        else
+{ echo"Okay das Linux Starterpaket wird nun installiert"
+        cd Downloads
+        wget https://raw.githubusercontent.com/Xenuzz/APT-Update-Upgrade-Clean-Script/main/install.bh
+        sudo bash Linux_Starterpaket.bh
+
+    exit
+}
+fi

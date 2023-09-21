@@ -1,0 +1,42 @@
+#!/bin/bash/ 
+echo -e
+echo -e "\033[5m\e[1;32m\033[4m\033[1mJetzt wird ihr Linux ein Update durchführen \e[0m"
+echo -n "Möchtest du das Update durchführen? [JN]?"
+
+while ((!gueltig)); do
+  read -sn1 answer
+  case "$answer" in
+    [JjYy])    result=1; gueltig=1 ;;
+    [Nn])      result=0; gueltig=1 ;;
+    *)         gueltig=0 ;;
+  esac
+done
+
+echo
+
+if ((result)); then
+{ echo "Okay das Update startet jetzt"
+        echo -e "\e[1;32m Step 1: Updating packages \e[0m"
+        sudo apt-get update
+
+        echo
+
+        echo -e "\e[1;32m Step 2: Upgrading packages \e[0m" 
+        sudo apt-get upgrade -y
+        sudo apt-get dist upgrade -y 
+        sudo apt-get update
+
+        echo 
+
+        echo -e "\e[1;32m Step 3: Cleaning up \e[0m"
+        sudo apt-get clean
+        sudo apt-get autoclean
+        sudo apt-get autoremove
+
+        exit
+}
+        else
+{   echo "Okay das Update wird nicht durchgeführt"
+    exit
+}
+fi
