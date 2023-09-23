@@ -21,6 +21,8 @@ if ((result)); then
         sudo apt install git    -y
         apt install wget        -y
         apt install pdftk       -y
+        apt install openssh-client  -y
+        apt install openshh-server  -y
         apt install screen      -y
         apt install autojump    -y
         apt install bleachbit   -y
