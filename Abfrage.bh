@@ -30,7 +30,7 @@ if ((result)); then
 { echo"Okay das Linux Starterpaket wird nun installiert"
         sudo apt install wget -y
         cd Downloads
-        wget https://raw.githubusercontent.com/Xenuzz/APT-Update-Upgrade-Clean-Script/main/install.bh
+        wget https://raw.githubusercontent.com/Xenuzz/APT-Update-Upgrade-Clean-Script/main/Linux_Starterpaket.bh
         sudo bash Linux_Starterpaket.bh
 
     exit
