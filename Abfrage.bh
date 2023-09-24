@@ -18,9 +18,9 @@ echo
 
 if ((result)); then
 { echo "Okay dein Linux wird nur ein Update durchführen"
-        sudo apt install wget -y
+        sudo apt install git -y
         cd Downloads 
-        wget https://raw.githubusercontent.com/Xenuzz/APT-Update-Upgrade-Clean-Script/main/update.bh
+        git https://raw.githubusercontent.com/Xenuzz/APT-Update-Upgrade-Clean-Script/main/update.bh
         cd APT-Update-Upgrade-Clean-Script
         sudo bash Linux_Update.bh
         echo -e
@@ -29,9 +29,9 @@ if ((result)); then
      
         else
 { echo"Okay das Linux Starterpaket wird nun installiert"
-        sudo apt install wget -y
+        sudo apt install git -y
         cd Downloads
-        wget https://raw.githubusercontent.com/Xenuzz/APT-Update-Upgrade-Clean-Script/main/Linux_Starterpaket.bh
+        git https://raw.githubusercontent.com/Xenuzz/APT-Update-Upgrade-Clean-Script/main/Linux_Starterpaket.bh
         cd /APT-Update-Upgrade-Clean-Script/
         sudo bash Linux_Starterpaket.bh
 
