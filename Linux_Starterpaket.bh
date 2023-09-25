@@ -30,6 +30,7 @@ if ((result)); then
         apt install rsync       -y
         apt install wine        -y
         apt install npm         -y
+        apt install code        -y
         apt install python3     -y
 
         echo
