@@ -47,7 +47,7 @@ if ((result)); then
         sudo apt-get clean      -y
         sudo apt-get autoclean  -y
         sudo apt-get autoremove -y
-        sudo shutdown -r        -y
+        sudo reboot
 
         exit
 }
