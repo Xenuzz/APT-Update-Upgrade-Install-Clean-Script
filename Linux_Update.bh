@@ -32,7 +32,7 @@ if ((result)); then
         sudo apt-get clean
         sudo apt-get autoclean
         sudo apt-get autoremove
-        sudo shutdown -r       -y
+        sudo reboot
 
         exit
 }
