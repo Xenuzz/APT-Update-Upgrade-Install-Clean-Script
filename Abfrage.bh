@@ -20,7 +20,7 @@ if ((result)); then
 { echo "Okay dein Linux wird nur ein Update durchführen"
         sudo apt install git -y
         cd Downloads 
-        git clone https://raw.githubusercontent.com/Xenuzz/APT-Update-Upgrade-Clean-Script/main/update.bh
+        git clone https://github.com/Xenuzz/APT-Update-Upgrade-Install-Clean-Script.git
         unzip APT-Update-Upgrade-Clean-Script.zip
         cd /APT-Update-Upgrade-Clean-Script/
         sudo bash Linux_Update.bh
@@ -32,7 +32,7 @@ if ((result)); then
 { echo"Okay das Linux Starterpaket wird nun installiert"
         sudo apt install git -y
         cd Downloads
-        git clone https://raw.githubusercontent.com/Xenuzz/APT-Update-Upgrade-Clean-Script/main/Linux_Starterpaket.bh
+        git clone https://github.com/Xenuzz/APT-Update-Upgrade-Install-Clean-Script.git
         unzip APT-Update-Upgrade-Clean-Script.zip
         cd /APT-Update-Upgrade-Clean-Script/
         sudo bash Linux_Starterpaket.bh
