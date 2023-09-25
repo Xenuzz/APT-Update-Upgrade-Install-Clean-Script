@@ -21,7 +21,8 @@ if ((result)); then
         sudo apt install git -y
         cd Downloads 
         git https://raw.githubusercontent.com/Xenuzz/APT-Update-Upgrade-Clean-Script/main/update.bh
-        cd APT-Update-Upgrade-Clean-Script
+        unzip APT-Update-Upgrade-Clean-Script.zip
+        cd /APT-Update-Upgrade-Clean-Script/
         sudo bash Linux_Update.bh
         echo -e
     exit
@@ -32,6 +33,7 @@ if ((result)); then
         sudo apt install git -y
         cd Downloads
         git https://raw.githubusercontent.com/Xenuzz/APT-Update-Upgrade-Clean-Script/main/Linux_Starterpaket.bh
+        unzip APT-Update-Upgrade-Clean-Script.zip
         cd /APT-Update-Upgrade-Clean-Script/
         sudo bash Linux_Starterpaket.bh
 
